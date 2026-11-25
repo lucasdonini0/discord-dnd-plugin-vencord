@@ -1,0 +1,183 @@
+.vc-dndfocus-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vc-dndfocus-tabs {
+    display: flex;
+    gap: 6px;
+}
+
+.vc-dndfocus-tab {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--background-mod-subtle, rgb(255 255 255 / 4%));
+    color: var(--text-default, var(--text-normal));
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.vc-dndfocus-tab:hover {
+    background: var(--background-mod-normal, rgb(255 255 255 / 8%));
+}
+
+.vc-dndfocus-tab-active,
+.vc-dndfocus-tab-active:hover {
+    background: var(--brand-500, #5865f2);
+    color: #fff;
+}
+
+.vc-dndfocus-list {
+    max-height: 420px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.vc-dndfocus-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.vc-dndfocus-row:hover {
+    background: var(--background-mod-subtle, rgb(255 255 255 / 4%));
+}
+
+.vc-dndfocus-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.vc-dndfocus-icon-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-mod-normal, rgb(255 255 255 / 8%));
+    color: var(--text-default, var(--text-normal));
+    font-weight: 600;
+}
+
+.vc-dndfocus-names {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.vc-dndfocus-name {
+    color: var(--text-default, var(--text-normal));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vc-dndfocus-subtitle {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.vc-dndfocus-empty {
+    padding: 12px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.vc-dndfocus-lock {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    background: var(--background-base-lower, var(--background-primary));
+    user-select: none;
+}
+
+.vc-dndfocus-lock-img {
+    max-width: min(420px, 80%);
+    max-height: 55vh;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
+    transition: transform 0.15s ease;
+}
+
+.vc-dndfocus-lock-img:hover {
+    transform: scale(1.03);
+}
+
+.vc-dndfocus-lock-img:active {
+    transform: scale(0.97);
+}
+
+.vc-dndfocus-shake {
+    animation: vc-dndfocus-shake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes vc-dndfocus-shake {
+    10%, 90% { transform: translateX(-2px) rotate(-1deg); }
+    20%, 80% { transform: translateX(5px) rotate(2deg); }
+    30%, 50%, 70% { transform: translateX(-9px) rotate(-3deg); }
+    40%, 60% { transform: translateX(9px) rotate(3deg); }
+}
+
+.vc-dndfocus-lock-dnd {
+    margin-top: 8px;
+    color: var(--status-danger, #f23f43);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vc-dndfocus-lock-title {
+    color: var(--header-primary, var(--text-strong, #fff));
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.vc-dndfocus-streamer-wrap {
+    display: flex;
+    justify-content: center;
+    /* Same width as Discord's own server list items, so it lines up with the Home icon */
+    width: var(--custom-guild-list-width, 72px);
+    margin: 0 0 8px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.vc-dndfocus-streamer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--background-mod-normal, rgb(255 255 255 / 8%));
+    color: var(--interactive-icon-default, var(--interactive-normal));
+    cursor: pointer;
+    transition: border-radius 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.vc-dndfocus-streamer:hover {
+    border-radius: 12px;
+    color: var(--interactive-icon-active, #fff);
+}
+
+.vc-dndfocus-streamer-on,
+.vc-dndfocus-streamer-on:hover {
+    border-radius: 12px;
+    background: #593695;
+    color: #fff;
+}
